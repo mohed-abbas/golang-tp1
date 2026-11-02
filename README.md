@@ -36,13 +36,13 @@ La base SQLite est stockée dans le volume Docker `db-data` : les données survi
 
 ### Le port 8080 est déjà utilisé ?
 
-Le port publié sur la machine hôte se change avec la variable `API_PORT` (le conteneur écoute toujours sur 8080) :
+Le port publié sur la machine hôte est défini par la variable `API_PORT` du fichier `.env` (lu automatiquement par Docker Compose ; le conteneur écoute toujours sur 8080). Il suffit de la modifier, par exemple `API_PORT=18080`, ou de la surcharger au lancement :
 
 ```bash
 API_PORT=18080 docker compose up --build -d
 ```
 
-Il est aussi possible de créer un fichier `.env` à la racine contenant `API_PORT=18080` ; Docker Compose le lit automatiquement.
+Sans fichier `.env`, le port 8080 est utilisé par défaut.
 
 ---
 
