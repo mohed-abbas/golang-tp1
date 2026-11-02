@@ -7,3 +7,6 @@
 *.db-wal
 
 .DS_Store
+
+# Configuration locale (ports, etc.)
+.env
