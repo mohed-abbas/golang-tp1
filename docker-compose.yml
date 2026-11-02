@@ -1,0 +1,14 @@
+services:
+  api:
+    build: .
+    image: compagnie-aerienne:latest
+    ports:
+      - "${API_PORT:-8080}:8080"
+    environment:
+      DB_PATH: /data/compagnie.db
+    volumes:
+      - db-data:/data
+    restart: unless-stopped
+
+volumes:
+  db-data:

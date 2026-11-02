@@ -1,0 +1,6 @@
+# Seuls les fichiers nécessaires à la compilation sont envoyés à Docker.
+*
+!go.mod
+!go.sum
+!cmd/
+!internal/
