@@ -27,7 +27,7 @@ var schema = []string{
 		aeroport_depart  TEXT NOT NULL,
 		aeroport_arrivee TEXT NOT NULL,
 		date             TEXT NOT NULL,
-		immatriculation  TEXT NOT NULL REFERENCES avions (immatriculation) ON DELETE RESTRICT,
+		immatriculation  TEXT NOT NULL REFERENCES avions (immatriculation),
 		statut           TEXT NOT NULL CHECK (statut IN ('programme', 'en_cours', 'annule')),
 		cree_le          TEXT NOT NULL
 	)`,
